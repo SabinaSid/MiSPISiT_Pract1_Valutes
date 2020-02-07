@@ -1,11 +1,11 @@
 <div>
     <form>
-        <div class="form-row">
+        <div class="form-row ">
             <div class="form-group col m-4">
-                <select class="form-control" id="valuteIn" onchange="convert(this)">
+                <select class = "form-control" id = "valuteIn" onchange="convert(this)">
                     {{#each Valute}}
-                    <option value="{{Value}}">{{Name}}</option>
-                    {{/each}}
+                        <option value = "{{Value}}">{{Name}}</option>
+                    {{/each}}    
                 </select>
                 <input class="form-control" id="textIn" placeholder="100" oninput="convert(this)">
             </div>
@@ -13,15 +13,15 @@
             <div class="form-group col m-4">
                 <select class="form-control" id="valuteOut" onchange="convert(this)">
                     {{#each Valute}}
-                    <option value="{{Value}}">{{Name}}</option>
+                        <option value = "{{Value}}">{{Name}}</option>
                     {{/each}}
                 </select>
                 <input class="form-control" id="textOut" placeholder="100" oninput="convert(this)">
             </div>
-
         </div>
     </form>
 </div>
+
 <div>
     <table class="table table-hover">
         <thead>
@@ -44,22 +44,25 @@
             </tr>
             {{/each}}
         </tbody>
-    </table>
+    </table>    
 </div>
+
 <script>
-    let list=document.getElementById("valuteIn").children;
-    list.item(list.length - 1).setAttribute("selected","selected");
-
+    //при загрузке страницы задаем валюту
+    let list = document.getElementById("valuteIn").children;
+    list.item(list.length-1).setAttribute("selected","selected");
+    //функция конвертации валют
+    //obj - объект, который вызвал эту функцию
     function convert(obj){
-        let valuteIn=document.getElementById("valuteIn");
-        let valuteOut=document.getElementById("valuteOut");
-        let textIn=document.getElementById("textIn");
-        let textOut=document.getElementById("textOut");
+        let valuteIn = document.getElementById("valuteIn");
+        let valuteOut = document.getElementById("valuteOut");
+        let textIn = document.getElementById("textIn");
+        let textOut = document.getElementById("textOut");
 
-        if(obj==valuteIn || obj==textIn){
-            textIn.value =textIn.value * valuteIn.value / valuteOut.value;
+        if (obj==valuteIn||obj==textIn){
+            textOut.value = textIn.value*valuteIn.value/valuteOut.value;
         } else{
-            textIn.value=textOut.value * valuteOut.value/valuteIn.value;
+            textIn.value = textOut.value*valuteOut.value/valuteIn.value;
         }
     }
 </script>
