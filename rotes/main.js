@@ -14,13 +14,13 @@ module.exports=(r,q)=>{
                 CharCode:"RUS",
                 Nominal:1,
                 Name:"Российский рубль",
-                Valute:1,
+                Value:1,
                 Previous:1
             }
             for(let key in model.Valute){
                 let item=model.Valute[key];
-                item.Valute=item.Valute/item.Nominal;
-                item.DeValute=1/item.Valutel
+                item.Value=item.Value/item.Nominal;
+                item.DeValue=1/item.Value;
             }
             q.render("main",model);
         }
