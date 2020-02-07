@@ -1,0 +1,24 @@
+{
+  "name": "mispisit_pract1_valutes",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000M\u0000i\u0000S\u0000P\u0000I\u0000S\u0000i\u0000T\u0000_\u0000P\u0000r\u0000a\u0000c\u0000t\u00001\u0000_\u0000V\u0000a\u0000l\u0000u\u0000t\u0000e\u0000s\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SabinaSid/MiSPISiT_Pract1_Valutes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SabinaSid/MiSPISiT_Pract1_Valutes/issues"
+  },
+  "homepage": "https://github.com/SabinaSid/MiSPISiT_Pract1_Valutes#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "request": "^2.88.0"
+  }
+}
